@@ -1,0 +1,147 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --gray-blue: hsl(218, 22%, 67%);
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    background: var(--light-gray);
+    font-family: 'Karla', sans-serif;      
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    font-size: 1rem;
+    padding: 0;
+}
+ul li {
+    padding: 2px 0;
+    font-size: 0.8em;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "pricing"
+        "copy";
+    width: 50%;
+    max-width: 320px;
+    border-radius: 25px;
+    box-shadow: 2px 10px 20px #ccc;
+}
+
+.header {
+    grid-area: header;
+    background: #FFF;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--gray-blue);
+}
+
+.header h1, .header p {
+    margin: 15px auto;
+}
+
+.header h1 {    
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+.header__guarantee {
+    font-weight: 700;
+    color: var(--bright-yellow);
+}
+
+.header__description {
+    font-weight: 400;
+}
+
+.pricing {
+    grid-area: pricing;
+    background-color: var(--cyan);
+    padding: 20px;
+}
+
+.price__amount {
+    font-weight: 700;
+    font-size: 1.7rem;
+    padding-right: 10px;
+}
+
+.price__cycle {
+    font-size: 0.8rem;
+    color: var(--light-gray);
+}
+
+.pricing button {
+    cursor: pointer;
+    background-color: var(--bright-yellow);
+    color: #FFF;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;    
+    box-shadow: 2px 10px 20px var(--cyan);
+}
+
+.pricing button:hover {
+    background-color: #FFF;
+    color: var(--bright-yellow);
+    transition: all ease-out 0.5s;
+}
+
+.pricing h2, .pricing p {
+    margin: 15px auto;
+}
+
+.copy {
+    grid-area: copy;
+    padding: 20px;
+    background-color: #4ABDBD;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.copy h2, .copy ul {
+    margin: 15px auto;
+}
+
+.copy li {
+    color: var(--light-gray);
+}
+
+
+@media (min-width: 375px) {
+
+    .container {
+        max-width: 800px;
+        grid-template-areas: 
+        "header header header header "
+        "pricing pricing copy copy";
+    }
+
+    .copy {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .pricing {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 0px;
+    }
+}
