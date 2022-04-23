@@ -3,6 +3,7 @@
     --bright-yellow: hsl(71, 73%, 54%);
     --light-gray: hsl(204, 43%, 93%);
     --gray-blue: hsl(218, 22%, 67%);
+    --dark-yellow: hsl(71, 86%, 26%);
 }
 
 *, :after, :before {
@@ -98,7 +99,7 @@ ul li {
     border: 0;
     padding: 10px;
     border-radius: 5px;    
-    box-shadow: 8px 10px 10px var(--cyan);
+    box-shadow: 2px 4px 10px var(--dark-yellow)
 }
 
 .pricing button:hover {
